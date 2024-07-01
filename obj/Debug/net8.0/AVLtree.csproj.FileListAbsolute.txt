@@ -12,3 +12,18 @@ D:\semester 2\Programming 2 (C#)\project\AVLtree\obj\Debug\net8.0\refint\AVLtree
 D:\semester 2\Programming 2 (C#)\project\AVLtree\obj\Debug\net8.0\AVLtree.pdb
 D:\semester 2\Programming 2 (C#)\project\AVLtree\obj\Debug\net8.0\AVLtree.genruntimeconfig.cache
 D:\semester 2\Programming 2 (C#)\project\AVLtree\obj\Debug\net8.0\ref\AVLtree.dll
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\bin\Debug\net8.0\AVLtree.exe
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\bin\Debug\net8.0\AVLtree.deps.json
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\bin\Debug\net8.0\AVLtree.runtimeconfig.json
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\bin\Debug\net8.0\AVLtree.dll
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\bin\Debug\net8.0\AVLtree.pdb
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\obj\Debug\net8.0\AVLtree.GeneratedMSBuildEditorConfig.editorconfig
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\obj\Debug\net8.0\AVLtree.AssemblyInfoInputs.cache
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\obj\Debug\net8.0\AVLtree.AssemblyInfo.cs
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\obj\Debug\net8.0\AVLtree.csproj.CoreCompileInputs.cache
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\obj\Debug\net8.0\AVLtree.sourcelink.json
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\obj\Debug\net8.0\AVLtree.dll
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\obj\Debug\net8.0\refint\AVLtree.dll
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\obj\Debug\net8.0\AVLtree.pdb
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\obj\Debug\net8.0\AVLtree.genruntimeconfig.cache
+D:\semester 2\Programming 2 (C#)\semestral project\AVLtree\obj\Debug\net8.0\ref\AVLtree.dll
