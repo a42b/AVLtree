@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\semester 2\\Programming 2 (C#)\\semestral project\\AVLtree\\AVLtree.csproj": {}
+    "D:\\semester 2\\Programming 2 (C#)\\semester project\\AVLtree\\AVLtree.csproj": {}
   },
   "projects": {
-    "D:\\semester 2\\Programming 2 (C#)\\semestral project\\AVLtree\\AVLtree.csproj": {
+    "D:\\semester 2\\Programming 2 (C#)\\semester project\\AVLtree\\AVLtree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\semester 2\\Programming 2 (C#)\\semestral project\\AVLtree\\AVLtree.csproj",
+        "projectUniqueName": "D:\\semester 2\\Programming 2 (C#)\\semester project\\AVLtree\\AVLtree.csproj",
         "projectName": "AVLtree",
-        "projectPath": "D:\\semester 2\\Programming 2 (C#)\\semestral project\\AVLtree\\AVLtree.csproj",
+        "projectPath": "D:\\semester 2\\Programming 2 (C#)\\semester project\\AVLtree\\AVLtree.csproj",
         "packagesPath": "C:\\Users\\tonia\\.nuget\\packages\\",
-        "outputPath": "D:\\semester 2\\Programming 2 (C#)\\semestral project\\AVLtree\\obj\\",
+        "outputPath": "D:\\semester 2\\Programming 2 (C#)\\semester project\\AVLtree\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tonia\\AppData\\Roaming\\NuGet\\NuGet.Config"

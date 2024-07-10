@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YxfVRviYWrg=",
+  "dgSpecHash": "r/KDqGab2XU=",
   "success": true,
-  "projectFilePath": "D:\\semester 2\\Programming 2 (C#)\\semestral project\\AVLtree\\AVLtree.csproj",
+  "projectFilePath": "D:\\semester 2\\Programming 2 (C#)\\semester project\\AVLtree\\AVLtree.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tonia\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",
     "C:\\Users\\tonia\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

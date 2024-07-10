@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using AVLtree;
+using AVLTree;
 
 namespace AVLtree.Tests
 {
@@ -54,7 +54,7 @@ namespace AVLtree.Tests
             _avlTree.Insert(50);
 
             int height = _avlTree.GetHeight();
-            Assert.AreEqual(3, height); // Adjust the expected height based on your AVL tree logic
+            Assert.AreEqual(3, height); 
         }
     }
 }
