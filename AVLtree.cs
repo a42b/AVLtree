@@ -5,7 +5,6 @@ namespace AVLTree
 {
     public class AVLTree<T> where T : IComparable<T>
     {
-        // AVL tree node class
         public class Node
         {
             public T Data;
@@ -21,13 +20,11 @@ namespace AVLTree
 
         private Node root;
 
-        // Returns the height of the given node or 0 if the node is null.
         public int Height(Node node)
         {
             return node?.Height ?? 0;
         }
 
-        // Updates the height of the given node based on the heights of its children.
         private void UpdateHeight(Node node)
         {
             node.Height = Math.Max(Height(node.Left), Height(node.Right)) + 1;
@@ -38,13 +35,11 @@ namespace AVLTree
             return Height(root);
         }
 
-        // Gets the balance factor of the node. A balance factor of -1, 0, or 1 means the node is balanced.
         private int GetBalanceFactor(Node node)
         {
             return node == null ? 0 : Height(node.Left) - Height(node.Right);
         }
 
-        // Performs a left rotation balance.
         private Node RotateLeft(Node x)
         {
             Node y = x.Right;
@@ -59,7 +54,6 @@ namespace AVLTree
             return y;
         }
 
-        // Performs a right rotation  balance.
         private Node RotateRight(Node y)
         {
             Node x = y.Left;
@@ -74,21 +68,18 @@ namespace AVLTree
             return x;
         }
 
-        // Combination of left and right rotation.
         private Node RotateLeftRight(Node node)
         {
             node.Left = RotateLeft(node.Left);
             return RotateRight(node);
         }
 
-        // Combination of right and left rotation.
         private Node RotateRightLeft(Node node)
         {
             node.Right = RotateRight(node.Right);
             return RotateLeft(node);
         }
 
-        // Balances the subtree rooted at the given node.
         private Node Balance(Node node)
         {
             int balanceFactor = GetBalanceFactor(node);
@@ -110,13 +101,11 @@ namespace AVLTree
             return node;
         }
 
-        // Public method to insert a value into the AVL tree.
         public void Insert(T data)
         {
             root = Insert(root, data);
         }
 
-        // Recursive insertion with balancing.
         private Node Insert(Node node, T data)
         {
             if (node == null)
@@ -134,13 +123,11 @@ namespace AVLTree
             return Balance(node);
         }
 
-        // Public method to check if the tree contains a specific value.
         public bool Contains(T data)
         {
             return Contains(root, data);
         }
 
-        // Recursive search to check if the tree contains a specific value.
         private bool Contains(Node node, T data)
         {
             if (node == null)
@@ -155,13 +142,11 @@ namespace AVLTree
                 return true;
         }
 
-        // Public method to delete a value from the AVL tree.
         public void Delete(T data)
         {
             root = Delete(root, data);
         }
 
-        // Recursive deletion with balancing.
         private Node Delete(Node node, T data)
         {
             if (node == null)
@@ -200,7 +185,6 @@ namespace AVLTree
             return Balance(node);
         }
 
-        // Finds the node with the minimum value in the given subtree.
         private Node GetMinValueNode(Node node)
         {
             Node current = node;
@@ -209,7 +193,6 @@ namespace AVLTree
             return current;
         }
 
-        // Prints the tree using level-order traversal.
         public void PrintTree()
         {
             if (root == null)
@@ -237,13 +220,11 @@ namespace AVLTree
             Console.WriteLine();
         }
 
-        // Performs in-order traversal of the tree.
         public void InOrderTraversal(Action<T> action)
         {
             InOrderTraversal(root, action);
         }
 
-        // Recursive in-order traversal helper method.
         private void InOrderTraversal(Node node, Action<T> action)
         {
             if (node != null)
@@ -254,13 +235,11 @@ namespace AVLTree
             }
         }
 
-        // Performs pre-order traversal of the tree.
         public void PreOrderTraversal(Action<T> action)
         {
             PreOrderTraversal(root, action);
         }
 
-        // Recursive pre-order traversal helper method.
         private void PreOrderTraversal(Node node, Action<T> action)
         {
             if (node != null)
@@ -271,13 +250,11 @@ namespace AVLTree
             }
         }
 
-        // Performs post-order traversal of the tree.
         public void PostOrderTraversal(Action<T> action)
         {
             PostOrderTraversal(root, action);
         }
 
-        // Recursive post-order traversal helper method.
         private void PostOrderTraversal(Node node, Action<T> action)
         {
             if (node != null)
@@ -286,6 +263,42 @@ namespace AVLTree
                 PostOrderTraversal(node.Right, action);
                 action(node.Data);
             }
+        }
+
+        // Checks if the balance factor of each node is either -1, 0, or 1.
+        public bool IsBalanced()
+        {
+            return IsBalanced(root);
+        }
+
+        private bool IsBalanced(Node node)
+        {
+            if (node == null)
+                return true;
+
+            int balanceFactor = GetBalanceFactor(node);
+            if (balanceFactor < -1 || balanceFactor > 1)
+                return false;
+
+            return IsBalanced(node.Left) && IsBalanced(node.Right);
+        }
+
+        // Checks if the height information of each node is correct.
+        public bool IsHeightCorrect()
+        {
+            return IsHeightCorrect(root);
+        }
+
+        private bool IsHeightCorrect(Node node)
+        {
+            if (node == null)
+                return true;
+
+            int expectedHeight = Math.Max(Height(node.Left), Height(node.Right)) + 1;
+            if (node.Height != expectedHeight)
+                return false;
+
+            return IsHeightCorrect(node.Left) && IsHeightCorrect(node.Right);
         }
     }
 }
