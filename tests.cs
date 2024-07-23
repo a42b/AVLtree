@@ -1,5 +1,7 @@
 using NUnit.Framework;
 using AVLTree;
+using System;
+using System.Collections.Generic;
 
 namespace AVLtree.Tests
 {
@@ -7,11 +9,13 @@ namespace AVLtree.Tests
     public class AVLTreeTests
     {
         private AVLTree<int> _avlTree;
+        private Random _random;
 
         [SetUp]
         public void Setup()
         {
             _avlTree = new AVLTree<int>();
+            _random = new Random();
         }
 
         [Test]
@@ -54,7 +58,55 @@ namespace AVLtree.Tests
             _avlTree.Insert(50);
 
             int height = _avlTree.GetHeight();
-            Assert.AreEqual(3, height); 
+            Assert.AreEqual(3, height);
+        }
+
+        [Test]
+        public void Insert_LargeNumberOfRandomElements_ShouldBeBalanced()
+        {
+            HashSet<int> insertedValues = new HashSet<int>();
+            while (insertedValues.Count < 1000)
+            {
+                int randomValue = _random.Next(1, 10000);
+                if (!insertedValues.Contains(randomValue))
+                {
+                    _avlTree.Insert(randomValue);
+                    insertedValues.Add(randomValue);
+                }
+            }
+
+            Assert.IsTrue(_avlTree.IsBalanced());
+            Assert.IsTrue(_avlTree.IsHeightCorrect());
+        }
+
+        [Test]
+        public void InsertAndDelete_RandomElements_ShouldBeBalanced()
+        {
+            HashSet<int> insertedValues = new HashSet<int>();
+            while (insertedValues.Count < 1000)
+            {
+                int randomValue = _random.Next(1, 10000);
+                if (!insertedValues.Contains(randomValue))
+                {
+                    _avlTree.Insert(randomValue);
+                    insertedValues.Add(randomValue);
+                }
+            }
+
+            int deleteCount = 0;
+            while (deleteCount < 500)
+            {
+                int randomValue = _random.Next(1, 10000);
+                if (insertedValues.Contains(randomValue))
+                {
+                    _avlTree.Delete(randomValue);
+                    insertedValues.Remove(randomValue);
+                    deleteCount++;
+                }
+            }
+
+            Assert.IsTrue(_avlTree.IsBalanced());
+            Assert.IsTrue(_avlTree.IsHeightCorrect());
         }
     }
 }
